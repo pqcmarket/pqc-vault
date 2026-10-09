@@ -1,0 +1,13 @@
+# Secrets. .env holds the deployer private key; keys/ holds the program keypair
+# that controls the program id and the throwaway devnet deployer. Never commit.
+.env
+keys/
+
+target
+**/*.rs.bk
+__pycache__/
+test-ledger
+node_modules
+client/dist
+.DS_Store
+HANDOFF.md

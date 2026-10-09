@@ -1,0 +1,10 @@
+{
+  "fixed_cu": 22599,
+  "cu_per_chain_step": 176.64,
+  "worst_case_steps": 990,
+  "bump_search_margin_cu": 45000,
+  "worst_case_sol_withdraw_cu": 242475,
+  "token_2022_cpi_overhead_cu": 57576,
+  "worst_case_token_2022_withdraw_cu": 300052,
+  "samples": [{"steps": 390, "cu": 89335}, {"steps": 465, "cu": 104194}, {"steps": 495, "cu": 117034}, {"steps": 510, "cu": 112210}, {"steps": 555, "cu": 117214}, {"steps": 570, "cu": 122884}]
+}

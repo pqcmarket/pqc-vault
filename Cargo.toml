@@ -1,0 +1,25 @@
+[workspace]
+members = ["programs/pqc-vault"]
+resolver = "2"
+
+[workspace.package]
+edition = "2021"
+rust-version = "1.89.0"
+
+# `cargo build-sbf` compiles for target_os = "solana", which host rustc does not
+# know about. Declaring it here keeps the entrypoint macro from emitting a wall of
+# unexpected-cfg warnings on every host build.
+[workspace.lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(target_os, values("solana"))'] }
+
+# This program guards money: overflow checks stay on in release.
+[profile.release]
+overflow-checks = true
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+
+[profile.release.build-override]
+opt-level = 3
+incremental = false
+codegen-units = 1

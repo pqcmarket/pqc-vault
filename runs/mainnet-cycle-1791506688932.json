@@ -1,0 +1,26 @@
+{
+  "cluster": "mainnet",
+  "programId": "DNsPfPecrbnS7jFqMpEDG3VoWAdkuaU2VxsmaPENcg9F",
+  "payer": "ESobDnh3gjhwhKyZuEoTNqeNNT33xPjkk7eRhwfVfMJi",
+  "recipient": "ESobDnh3gjhwhKyZuEoTNqeNNT33xPjkk7eRhwfVfMJi",
+  "vault": "494BWnxAs9fRBsjR49UMU9VAMTBHxiwjnLh6C81JDZMP",
+  "nextVault": "PrK9yX1eXuqMUQLV9gCnq71xVSVaNgks8eoMXrbmf7z",
+  "depositLamports": "0",
+  "amount": "4000000",
+  "startedAt": "2026-10-09T00:44:47.090Z",
+  "transactions": {
+    "writeSignature": [
+      "3rCRn9YYcrE8pY8KVfooaq2hxLJCp142fGdUPLfw1sd8zoewWoKmQLjCnBQ5nvh6qSQ7dGj23fG4LCsepjbPPoC9",
+      "3mWiisMpmN5LpG5xKB4gzQaxwjmauHHyHYZHnFdTX1jGhK4z8E3UdjNg5PPuMFEKoBNC7kQg3T3es97K8hXjCyRT",
+      "4HsVd5Ac1GhBhnQru2fkkAxcmtPXnQJtiTArNQVtE3n4BMGYQSxeTt8KK1vFjUB9BuRPqcQBSDJooKGyfSNACGQD"
+    ],
+    "withdraw": "54SNCqbvpww9Ubu1Kv3FePAw3jJp5fJHJaG4CTv6fFrHFMA3qBAmA4yDUAC5Mdz4yU9tXFScZ4mR33cK5DCmXtt"
+  },
+  "withdrawComputeUnits": null,
+  "result": {
+    "tombstoneLamports": "990600",
+    "nextVaultLamports": "5009400",
+    "recipientDelta": "16192080"
+  },
+  "finishedAt": "2026-10-09T00:44:48.932Z"
+}

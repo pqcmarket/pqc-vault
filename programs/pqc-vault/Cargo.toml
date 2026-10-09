@@ -1,0 +1,46 @@
+[package]
+name = "pqc-vault"
+version = "0.1.0"
+description = "Solana vaults that only a hash-based (WOTS) signature, verified on-chain, can move"
+edition = { workspace = true }
+rust-version = { workspace = true }
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[lints]
+workspace = true
+
+[features]
+# Lets dependents link the crate without pulling in a second entrypoint.
+no-entrypoint = []
+# Declared, never enabled: the entrypoint macro probes for them.
+custom-heap = []
+custom-panic = []
+
+[dependencies]
+# The 2.x SDK generation is what platform-tools' rustc 1.89 can build; 4.x+
+# pulls a solana-syscalls that needs a newer compiler than the SBF target has.
+solana-program = "2.3"
+
+[dev-dependencies]
+# Versions are aligned with litesvm 0.16's own pins so the SDK types unify.
+litesvm = "0.16.0"
+solana-account = "4.3"
+solana-compute-budget-interface = "3.0"
+solana-instruction = "3.4"
+solana-keypair = "3.1"
+solana-message = "4.4"
+solana-pubkey = "4.2"
+solana-signer = "3.0"
+solana-system-interface = { version = "2.0", features = ["bincode"] }
+solana-transaction = "4.1"
+solana-transaction-error = "3.3"
+# Interface crates carry layouts and instruction builders without an entrypoint.
+spl-token-2022-interface = "3.1"
+spl-associated-token-account-interface = "2.0"
+serde_json = "1"
+hex = "0.4"
+hmac = "0.12"
+sha2 = "0.10"

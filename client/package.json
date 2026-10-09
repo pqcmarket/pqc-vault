@@ -1,0 +1,34 @@
+{
+  "name": "@pqc-market/vault-client",
+  "version": "0.1.0",
+  "description": "Framework-free client for pqc-vault: derive WOTS vault keys, compute vault addresses, build deposit and withdraw transactions, sign spends.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "tsx --test src/*.test.ts",
+    "vectors": "tsx scripts/gen-vectors.ts",
+    "cycle": "tsx scripts/cycle.ts"
+  },
+  "dependencies": {
+    "@noble/hashes": "^2.4.0",
+    "@solana/web3.js": "^1.99.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  }
+}

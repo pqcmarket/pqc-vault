@@ -1,0 +1,6 @@
+# Host toolchain, used for `cargo test`. The on-chain build uses the rustc that
+# ships inside platform-tools (1.89.0) regardless of what is set here.
+[toolchain]
+channel = "1.95.0"
+components = ["rustfmt", "clippy"]
+profile = "minimal"
